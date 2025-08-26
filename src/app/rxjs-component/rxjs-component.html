@@ -1,0 +1,32 @@
+<div>
+    <button (click)="onTypeChange('observable')">Observable</button> &nbsp;
+    <button (click)="onTypeChange('Subject')">Subject</button> &nbsp;
+
+    <button (click)="onTypeChange('Of_From_RangeOperator')">Of_From_Range Operator</button>  &nbsp;
+    <button (click)="onTypeChange('interval_Timer')">interval & Timer Operator</button>  &nbsp;
+    <button (click)="onTypeChange('fromEvent')">From Event</button>  &nbsp;
+
+    <button (click)="onTypeChange('mapOperator')">Map Operator(Transformation)</button>  &nbsp;
+    <button (click)="onTypeChange('filterOperator')">Filter Operator</button>  &nbsp;
+    <button (click)="onTypeChange('joinCreationOp')">Join Creation Operator</button>  &nbsp;
+
+
+</div>
+
+
+
+
+
+<div style="padding-top: 10px;">
+    <app-observable-component *ngIf="selectedType == 'observable'"></app-observable-component>
+    <app-subject-component *ngIf="selectedType == 'Subject'"></app-subject-component>
+    <app-of-from-range-component *ngIf="selectedType == 'Of_From_RangeOperator'"></app-of-from-range-component>
+    <app-interval-timer-component *ngIf="selectedType == 'interval_Timer'"></app-interval-timer-component>
+    <app-fromevent-component *ngIf="selectedType == 'fromEvent'"></app-fromevent-component>
+
+    <app-map-operator *ngIf="selectedType == 'mapOperator'"></app-map-operator>
+    <app-filter-operator *ngIf="selectedType == 'filterOperator'"></app-filter-operator>
+    <app-join-creation-operator *ngIf="selectedType == 'joinCreationOp'"></app-join-creation-operator>
+
+    
+</div>

@@ -1,0 +1,15 @@
+<p>filter-operator works!</p>
+<div>
+    <button (click)="onTypeChange('filter')">Filter</button>  &nbsp;
+    <button (click)="onTypeChange('take')">Take</button>  &nbsp;
+    <button (click)="onTypeChange('takeUntil')">take Until</button>  &nbsp;
+    <button (click)="onTypeChange('distinctUntilChanged')">distinct Until Changed</button>  &nbsp;
+    
+</div>
+
+<div style="padding-top: 10px;">
+    <app-filter-component *ngIf="selectedType == 'filter'"></app-filter-component> 
+    <app-take-component *ngIf="selectedType == 'take'"></app-take-component>
+    <app-take-until-component *ngIf="selectedType == 'takeUntil'"></app-take-until-component>
+    <app-distinct-until-changed-component *ngIf="selectedType == 'distinctUntilChanged'"></app-distinct-until-changed-component>
+</div>

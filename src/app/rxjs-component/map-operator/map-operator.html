@@ -1,0 +1,19 @@
+<p>map-operator works!</p>
+<div>
+    <button (click)="onTypeChange('mapComp')">Map</button>  &nbsp;
+    <button (click)="onTypeChange('concatMap')">Concat Map</button>  &nbsp;
+    <button (click)="onTypeChange('meargeComp')">Mearge Map</button>  &nbsp;
+    <button (click)="onTypeChange('switchComp')">Switch Map</button>  &nbsp;
+    <button (click)="onTypeChange('exhausComp')">Exhaus Map</button>  &nbsp;
+    <button (click)="onTypeChange('toArrayMap')">toArray</button>  &nbsp;
+</div>
+
+<div style="padding-top: 10px;">
+    <app-map-component *ngIf="selectedType == 'mapComp'"></app-map-component> 
+    <app-concat-map-component *ngIf="selectedType == 'concatMap'"></app-concat-map-component>    
+    <app-mearge-map-component *ngIf="selectedType == 'meargeComp'"></app-mearge-map-component>    
+    <app-switch-map-component *ngIf="selectedType == 'switchComp'"></app-switch-map-component>    
+    <app-exhaus-map-component *ngIf="selectedType == 'exhausComp'"></app-exhaus-map-component>    
+    <app-to-array-component *ngIf="selectedType == 'toArrayMap'"></app-to-array-component>    
+
+</div>

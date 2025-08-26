@@ -1,0 +1,37 @@
+<div class="mycomp" layout="row" layout-align="center center">
+    <div style="height: 100%;width: 350px;"  layout="columns" layout-align="center center">
+        <h2>Enter Student Data:</h2>
+        <input type="number" placeholder="Enter No" [(ngModel)]="studNumber" />
+        <input type="text" placeholder="Enter Name" [(ngModel)]="studName" />
+        <button (click)="addStudent()">Add Student</button>
+    </div>
+     <div style="height: 100%;width: calc(100% - 350px);">
+        <table mat-table [dataSource]="studentArray" class="mat-elevation-z8">
+<!-- <table mat-table [dataSource]="students$ | async" class="mat-elevation-z8"> -->
+        <!--- Note that these columns can be defined in any order.
+                The actual rendered columns are set as a property on the row definition" -->
+
+        <!-- studNo Column -->
+        <ng-container matColumnDef="studNo">
+            <th mat-header-cell *matHeaderCellDef> No </th>
+            <td mat-cell *matCellDef="let element"> {{element.studNo}} </td>
+        </ng-container>
+
+        <!-- studName Column -->
+        <ng-container matColumnDef="studName">
+            <th mat-header-cell *matHeaderCellDef> Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.studName}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+    </div>
+
+</div>
+
+
+<h1>Counter: {{ count$ | async }}</h1>
+<button (click)="increment()">Increment</button>
+<button (click)="decrement()">Decrement</button>

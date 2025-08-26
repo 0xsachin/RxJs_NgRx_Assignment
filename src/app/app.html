@@ -1,0 +1,12 @@
+<button (click)="promissCalled()">Promiss Example</button>&nbsp;
+<button (click)="asyncwaitCalled()">Async/await Example</button>
+status: {{message}}
+<br><br>
+<button (click)="openNgRx()">NgRX</button> &nbsp;&nbsp;
+<button (click)="openRxJS()">RxJS</button>
+
+
+<div style="padding: 10px 0 10px 0;">
+    <app-ngrx-component *ngIf="ngRxFlag"></app-ngrx-component>
+    <app-rxjs-component *ngIf="rxJsFlag"></app-rxjs-component>
+</div>
